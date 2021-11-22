@@ -1,3 +1,6 @@
+
+import firebase from "firebase";
+
 const firebaseConfig = {
     apiKey: "AIzaSyCx3Rf6bpmidOy1yjv6cUVxH6CHGST2KyI",
     authDomain: "slack-clone-fa7da.firebaseapp.com",
@@ -7,3 +10,5 @@ const firebaseConfig = {
     appId: "1:5325137386:web:a68540f80d1df2e957fe93",
     measurementId: "G-ZK4PFJPWYJ"
   };
+
+  

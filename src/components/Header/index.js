@@ -9,7 +9,6 @@ import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 
 function Header () {
 
-  
     return (
       
         <HeaderStyled>
@@ -29,8 +28,6 @@ function Header () {
         <div className="header-right">
         <HelpOutlineIcon className="help-icon"/>
         </div>
-
-
 
         </div>
         

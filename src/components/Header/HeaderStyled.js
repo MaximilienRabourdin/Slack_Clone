@@ -6,7 +6,8 @@ const HeaderStyled = styled.div `
 .header-all{
 display: flex !important;
 width: 100%;
-position: fixed;
+max-height:4vh;
+/* position: fixed; */
 align-items: center;
 justify-content: space-between;
 padding: 10px 0;
@@ -80,6 +81,7 @@ background-color: var(--slack-color);
   }
     .help-icon {
         color:white;
+        cursor:pointer;
     }
 }
 `
