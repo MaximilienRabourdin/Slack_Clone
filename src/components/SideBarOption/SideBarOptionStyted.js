@@ -27,7 +27,13 @@ const SideBarOptionStyled = styled.div `
             
 
            
-        } `
+        }
+    
+        .channels-option {
+          padding:10px 0;
+          font-weight: 500;
+        
+        }`
 
 export default SideBarOptionStyled;
 

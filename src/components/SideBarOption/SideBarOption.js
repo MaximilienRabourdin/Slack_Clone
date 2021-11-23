@@ -1,38 +1,52 @@
-// import React from 'react'
-// import SideBarOptionStyled from './SideBarOptionStyted';
+import React from 'react'
+import { db } from '../../firebase';
 
-// function SideBarOption({Icon, title, addChanelOption}) {
-//     return (
+import SideBarOptionStyled from './SideBarOptionStyted';
 
-//         // const addChannel = (e) => {
+function SideBarOption({Icon, title, addChanelOption, id}) {
 
-//         // }
+    const addChannel = (e) => {
+     
+            const channelName = prompt('Please enter the channel name');
 
-        
-//         // const selectChannel = (e) => {
+            if (channelName) {
+                db.collection('rooms').add({
+                    name: channelName,
+                });
             
-//         // }
+        }
+    };
+    
+    const selectChannel = (e) => {
+        
+    };
 
-//         <SideBarOptionStyled>
 
-//         <div className="sidebar-container" onClick={addChanelOption ? addChannel : selectChannel }>
-//             {Icon && <Icon fontSize="small" style={{padding: 10 }} />}
-//             { Icon ? (
-//                 <h3>
-//                     {title}
-//                 </h3>
-//              )
-//               : (
-//                   <div className="sidebaroptionchannel">
-//                   <span>#</span> {title}
-//                   </div>
-//               )
-//               }
-//         </div>
+    return (
+
+        <SideBarOptionStyled>
+
+        <div className="sidebar-container" onClick={addChanelOption ? addChannel : selectChannel }>
+            {Icon && <Icon fontSize="small" style={{padding: 10 }} />}
+            { Icon ? (
+                <h3>
+                    {title}
+                </h3>
+             )
+              : (
+                 
+                   <h3 className="channels-option">
+                  <span>#</span> {title}
+                  </h3>
+                 
+              )
+              }
+        </div>
+      
    
-//         </SideBarOptionStyled>
+        </SideBarOptionStyled>
    
-//     );
-// }
+    );
+}
 
-// export default SideBarOption;
+export default SideBarOption;
